@@ -3,6 +3,7 @@ import os
 import boto3
 dynamodb = boto3.resource('dynamodb')
 
+#prueba pullRequest
 
 def delete(event, context):
     table = dynamodb.Table(os.environ['DYNAMODB_TABLE'])

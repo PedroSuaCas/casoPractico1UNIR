@@ -23,6 +23,11 @@ provider:
       Action: 
         - translate:TranslateText
         - comprehend:DetectDominantLanguage
+        - cloudwatch:GetMetricStatistics
+        - cloudwatch:ListMetrics
+        - logs:CreateLogGroup
+        - logs:CreateLogStream
+        - logs:PutLogEvents
       Resource: "*"
 
 
@@ -69,11 +74,11 @@ functions:
           cors: true
           
   translate:
-    handler: todos/translate.translate
+    handler: todos/translate.get
     events:
       - http:
           path: todos/{id}/{languague}
-          method: get
+          method: translate
           cors: true
 
 resources:

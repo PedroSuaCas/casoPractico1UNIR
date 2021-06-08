@@ -16,9 +16,17 @@ def translate(event, context):
             'languague': event['pathParameters']['languague']
         }
     )
-    resultFinal = translateService.translate_text(Text=result.Key.id,
-                                  SourceLanguageCode="auto",
-                                  TargetLanguageCode=result.Key.languague);
+    
+    if result.Key.languague == 'en':
+        target = 'en'
+    elif result.Key.languague == 'fr':
+        target = 'fr'
+    else:
+        target = 'auto'
+        
+    resultFinal = translateService.translate_text(Text = result.Key.id,
+                                  SourceLanguageCode ="auto",
+                                  TargetLanguageCode = target);
     
 
     # create a response

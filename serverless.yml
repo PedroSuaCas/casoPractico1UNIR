@@ -78,7 +78,7 @@ functions:
     events:
       - http:
           path: todos/{id}/{languague}
-          method: translate
+          method: get
           cors: true
 
 resources:

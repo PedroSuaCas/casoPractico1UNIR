@@ -4,7 +4,9 @@ import json
 from todos import decimalencoder
 import boto3
 dynamodb = boto3.resource('dynamodb')
+translateService = boto3.client(service_name='translate')
 
+#prueba pullRequest
 
 def get(event, context):
     table = dynamodb.Table(os.environ['DYNAMODB_TABLE'])

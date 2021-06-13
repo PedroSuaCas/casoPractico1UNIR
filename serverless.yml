@@ -60,6 +60,13 @@ functions:
           path: todos/{id}
           method: delete
           cors: true
+  translate:
+    handler: todos/translate.get
+    events:
+      - http:
+          path: todos/{id}/{languague}
+          method: get
+          cors: true
 
 resources:
   Resources:

@@ -30,8 +30,6 @@ provider:
         - logs:PutLogEvents
       Resource: "*"
 
-
-
 functions:
   create:
     handler: todos/create.create

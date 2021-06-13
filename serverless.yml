@@ -72,7 +72,10 @@ functions:
           path: todos/{id}
           method: delete
           cors: true
+<<<<<<< HEAD
           
+=======
+>>>>>>> main
   translate:
     handler: todos/translate.get
     events:

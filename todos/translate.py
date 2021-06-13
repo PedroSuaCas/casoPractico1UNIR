@@ -36,5 +36,9 @@ def get (event, context):
                            cls=decimalencoder.DecimalEncoder)
     }
 
+<<<<<<< HEAD
     return response
     
+=======
+    return response
+>>>>>>> main
